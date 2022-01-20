@@ -36,6 +36,7 @@
     }
     /*Round final grade to two decimals*/
     finalGrade = finalGrade.toFixed(2);
-    /*Alert box with grade*/
-    alert("Your final percentage is: " + String(finalGrade) + "% \n" + "Your final letter grade is: " + letterGrade);
+    /*Output Grade*/
+    gradeOutput = ("Your final percentage is: " + String(finalGrade) + "% \n" + "Your final letter grade is: " + letterGrade);
+    document.getElementById($("#output")).innerHTML = gradeOutput;
 })

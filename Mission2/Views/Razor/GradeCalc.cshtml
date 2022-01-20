@@ -26,21 +26,25 @@
                 <!-- Form to submit the grades -->
                 <form method="post">
                     <label>Assignments</label>
-                    <input type="number" step=".01" id="asgn" name="Asgn"/> <br />
+                    <input type="number" step=".01" id="asgn" asp-for="Asgn"/> <br />
 
                     <label>Group Projects</label>
-                    <input type="number" step=".01" id="gproj" name="Gproj" /> <br />
+                    <input type="number" step=".01" id="gproj" asp-for="Gproj" /> <br />
 
                     <label>Quizzes</label>
-                    <input type="number" step=".01" id="quiz" name="Quiz"/> <br />
+                    <input type="number" step=".01" id="quiz" asp-for="Quiz"/> <br />
 
                     <label>Exams</label>
-                    <input type="number" step=".01" id="exam" name="Exam" /> <br />
+                    <input type="number" step=".01" id="exam" asp-for="Exam" /> <br />
 
                     <label>Intex</label>
-                    <input type="number" step=".01" id="intex" name="Intex"/> <br />
+                    <input type="number" step=".01" id="intex" asp-for="Intex"/> <br />
 
                     <input id="calcGrade" type="submit" value="Calculate Score" />
+
+                    <p id="output"></p>
+
+                    <div asp-validation-summary="All"></div>
                 </form>
             </div>
         </div>
