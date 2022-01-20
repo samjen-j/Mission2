@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container px-4">
+        <a class="navbar-brand" href="#page-top">Mission 3</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" asp-controller="Razor" asp-action="Index">Info</a></li>
+                <li class="nav-item"><a class="nav-link" href="#calc">Calculate Grade</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Grade Calculator section-->
+<section class="bg-light" id="calc">
+    <div class="container px-4">
+        <div class="row gx-4 justify-content-center">
+            <div class="col-lg-8">
+                <h2>Calculate Grade</h2>
+                <!-- Form to submit the grades -->
+                <form method="post">
+                    <label>Assignments</label>
+                    <input type="number" step=".01" id="asgn" /> <br />
+
+                    <label>Group Projects</label>
+                    <input type="number" step=".01" id="gproj" /> <br />
+
+                    <label>Quizzes</label>
+                    <input type="number" step=".01" id="quiz" /> <br />
+
+                    <label>Exams</label>
+                    <input type="number" step=".01" id="exam" /> <br />
+
+                    <label>Intex</label>
+                    <input type="number" step=".01" id="intex" /> <br />
+
+                    <input id="calcGrade" type="submit" value="Calculate Score" />
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

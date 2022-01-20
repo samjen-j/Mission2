@@ -2,151 +2,52 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    ViewData["Header"] = "Sam Jensen";
 }
 
 
-<!-- Sam Jensen:1/12/22 -->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <meta charset="utf-8" />
-    <title>Mission 2</title>
-    <link rel="icon" href="img/favicon-32x32.png" />
-    <link href="lib/bootstrap/css/styles.css" rel="stylesheet" />
-    <link href="css/default.css" rel="stylesheet" />
-</head>
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <div class="container px-4">
-            <a class="navbar-brand" href="#page-top">Mission 2</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#info">Info</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#calc">Calculate Grade</a></li>
+<!-- Sam Jensen:1/19/22 -->
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container px-4">
+        <a class="navbar-brand" href="#page-top">Mission 3</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#info">Info</a></li>
+                <li class="nav-item"><a class="nav-link" asp-controller="Razor" asp-action="GradeCalc">Calculate Grade</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Header-->
+<header class="bg-primary bg-gradient text-white">
+    <div class="container px-4 text-center">
+        <h1 class="fw-bolder">@ViewData["Header"]</h1>
+    </div>
+</header>
+<!-- About section-->
+<section id="info">
+    <div class="container px-4">
+        <div class="row gx-4 justify-content-center">
+            <div class="col-lg-8">
+                <h2>What I want to learn:</h2>
+                <p class="lead">
+                    I think that what I would like to take from this class is to become proficient building
+                    webapps using a different programming language and environment than I have been used to.
+                    I also would like to learn how to be better prepared for a career where this environment
+                    is used as well.
+                </p>
+                <ul>
+                    <li>Software Developer</li>
+                    <li>Cybersecurity Specialist</li>
+                    <li>Front End Developer</li>
                 </ul>
             </div>
         </div>
-    </nav>
-    <!-- Header-->
-    <header class="bg-primary bg-gradient text-white">
-        <div class="container px-4 text-center">
-            <h1 class="fw-bolder">Sam Jensen</h1>
-        </div>
-    </header>
-    <!-- About section-->
-    <section id="info">
-        <div class="container px-4">
-            <div class="row gx-4 justify-content-center">
-                <div class="col-lg-8">
-                    <h2>What I want to learn:</h2>
-                    <p class="lead">
-                        I think that what I would like to take from this class is to become proficient building
-                        webapps using a different programming language and environment than I have been used to.
-                        I also would like to learn how to be better prepared for a career where this environment
-                        is used as well.
-                    </p>
-                    <ul>
-                        <li>Software Developer</li>
-                        <li>Cybersecurity Specialist</li>
-                        <li>Front End Developer</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Image of me skydiving -->
-    <div class="container px-4 text-center">
-        <img src="img/Sam Skydive.jpg" width="300" />
     </div>
-    <!-- Services section-->
-    <section class="bg-light" id="calc">
-        <div class="container px-4">
-            <div class="row gx-4 justify-content-center">
-                <div class="col-lg-8">
-                    <h2>Calculate Grade</h2>
-                    <!-- Form to submit the grades -->
-                    <form>
-                        <label>Assignments</label>
-                        <input type="number" step=".01" id="asgn" /> <br />
-
-                        <label>Group Projects</label>
-                        <input type="number" step=".01" id="gproj" /> <br />
-
-                        <label>Quizzes</label>
-                        <input type="number" step=".01" id="quiz" /> <br />
-
-                        <label>Exams</label>
-                        <input type="number" step=".01" id="exam" /> <br />
-
-                        <label>Intex</label>
-                        <input type="number" step=".01" id="intex" /> <br />
-
-                        <input id="calcGrade" type="button" value="Calculate Score" />
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Footer-->
-    <footer class="py-5 bg-dark">
-        <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p></div>
-    </footer>
-    <!-- Link to javascript files -->
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/bootstrap/js/scripts.js"></script>
-    <script src="lib/jquery/jquery-3.6.0.min.js"></script>
-    <script src="js/gradeCalc.js"></script>
-    <!-- Function to Calculate Grade -->
-    <script>
-        $("#calcGrade").click(function () {
-            /*All variables for grade categories*/
-            var asgn = parseFloat($("#asgn").val());
-            var gproj = parseFloat($("#gproj").val());
-            var quiz = parseFloat($("#quiz").val());
-            var exam = parseFloat($("#exam").val());
-            var intex = parseFloat($("#intex").val());
-            var letterGrade = ""
-            /*Calculate final percentage with weighted categories*/
-            var finalGrade = (asgn * .55) + (gproj * .05) + (quiz * .1) + (exam * .2) + (intex * .1);
-            /*State Final Letter Grade*/
-            if (finalGrade >= 94) {
-                letterGrade = "A"
-            } else if (finalGrade >= 90) {
-                letterGrade = "A-"
-            } else if (finalGrade >= 87) {
-                letterGrade = "B+"
-            } else if (finalGrade >= 84) {
-                letterGrade = "B"
-            } else if (finalGrade >= 80) {
-                letterGrade = "B-"
-            } else if (finalGrade >= 77) {
-                letterGrade = "C+"
-            } else if (finalGrade >= 74) {
-                letterGrade = "C"
-            } else if (finalGrade >= 70) {
-                letterGrade = "C-"
-            } else if (finalGrade >= 67) {
-                letterGrade = "D+"
-            } else if (finalGrade >= 64) {
-                letterGrade = "D"
-            } else if (finalGrade >= 60) {
-                letterGrade = "D-"
-            } else {
-                letterGrade = "E"
-            }
-            /*Round final grade to two decimals*/
-            finalGrade = finalGrade.toFixed(2);
-            /*Alert box with grade*/
-            alert("Your final percentage is: " + String(finalGrade) + "% \n" + "Your final letter grade is: " + letterGrade);
-        })
-    </script>
-
-</body>
-</html>
+</section>
+<!-- Image of me skydiving -->
+<div class="container px-4 text-center">
+    <img src="img/Sam Skydive.jpg" width="300" />
+</div>
