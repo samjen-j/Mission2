@@ -3,6 +3,8 @@
 *@
 @{
 }
+
+@model GradeCalcModel;
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container px-4">
         <a class="navbar-brand" href="#page-top">Mission 3</a>
@@ -24,19 +26,19 @@
                 <!-- Form to submit the grades -->
                 <form method="post">
                     <label>Assignments</label>
-                    <input type="number" step=".01" id="asgn" /> <br />
+                    <input type="number" step=".01" id="asgn" name="Asgn"/> <br />
 
                     <label>Group Projects</label>
-                    <input type="number" step=".01" id="gproj" /> <br />
+                    <input type="number" step=".01" id="gproj" name="Gproj" /> <br />
 
                     <label>Quizzes</label>
-                    <input type="number" step=".01" id="quiz" /> <br />
+                    <input type="number" step=".01" id="quiz" name="Quiz"/> <br />
 
                     <label>Exams</label>
-                    <input type="number" step=".01" id="exam" /> <br />
+                    <input type="number" step=".01" id="exam" name="Exam" /> <br />
 
                     <label>Intex</label>
-                    <input type="number" step=".01" id="intex" /> <br />
+                    <input type="number" step=".01" id="intex" name="Intex"/> <br />
 
                     <input id="calcGrade" type="submit" value="Calculate Score" />
                 </form>
